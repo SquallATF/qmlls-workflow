@@ -23,10 +23,10 @@ jobs:
       matrix:
         include:
           - name: linux-x64
-            os:   ubuntu-22.04
-            deps: libgl-dev libglu-dev 'libxcb*-dev' libx11-xcb-dev libxkbcommon-x11-dev libb2-dev libdouble-conversion-dev libpq5=14.19-0ubuntu0.22.04.1
+            os:   ubuntu-20.04
+            deps: libgl-dev libglu-dev 'libxcb*-dev' libx11-xcb-dev libxkbcommon-x11-dev libb2-dev libdouble-conversion-dev
             tools: ccache
-            install_cmd: sudo apt-get --allow-downgrades -y install
+            install_cmd: sudo apt-get -y install
             configure_flags: -xcb
             debugging_symbols_extension: .dbg
           - name: macos-universal
